@@ -23,18 +23,16 @@ body {
 
 .container {
   width: 50vw;;
-  border: 1px solid red;
   margin: 150px auto;
 }
 
 .dark-mode {
-  border: 1px solid yellow;
   background: var(--bg-color-3);
   color: var(--font-color-2);
+  transform: translate3d(80%,-50%,0);
 }
 
 .light-mode {
-  border: 1px solid yellow;
   background: var(--bg-color-2);
   color: var(--font-color-1);
 }
@@ -45,10 +43,12 @@ body {
   width: 400px;
   border-radius: 10px;
   padding: 20px;
+  box-shadow: 0px 3px 25px rgba(0,0,0,0.6);
 }
 
 .close-btn {
   text-align: right;
+  cursor: pointer;
 }
 
 svg {
@@ -61,6 +61,59 @@ svg {
   padding: 10px 0;
 }
 
+.search-bar {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+}
+
+#location-search {
+  border-style: none;
+  outline: none;
+  background: transparent;
+}
+
+.light-mode input::placeholder {
+  font-size: 16px;
+  color: #BFC5D4;
+}
+
+.dark-mode input::placeholder {
+  font-size: 16px;
+  color: var(--font-color-2);
+}
+
+.content {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.content p {
+  font-size: 12px;
+  padding: 10px 0;
+}
+
 img {
   width: 100px;
+}
+
+.turn-on-location-btn {
+  background-color: var(--bg-color-4);
+  border-radius: 5px;
+  width: 90%;
+  padding: 15px 0;
+  margin: 0 auto;
+  text-align: center;
+  cursor: pointer;
+}
+
+.turn-on-location-btn button {
+  border-style: none;
+  background: transparent;
+  color: white;
+  font-size: 18px;
 }
